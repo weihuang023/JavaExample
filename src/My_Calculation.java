@@ -27,12 +27,41 @@ class Superclass{
 	public void getAge(){		
 		System.out.println("The value of the variable name age in super class is "+ age);
 	}	
+	
+	int num = 20;
+	 // display method of superclass
+	public void display() {
+	   System.out.println("This is the display method of superclass");
+	}
 }
 
 class Subclass extends Superclass{
 	Subclass(int age){
 		super(age);
 	}
+	
+	 int num = 10;
+	 
+	   // display method of sub class
+	 public void display() {
+	      System.out.println("This is the display method of subclass");
+	 }
+	 public void my_method() {
+	      // Instantiating subclass
+	      Subclass sub = new Subclass(24);
+
+	      // Invoking the display() method of sub class
+	      sub.display();
+
+	      // Invoking the display() method of superclass
+	      super.display();
+
+	      // printing the value of variable num of subclass
+	      System.out.println("value of the variable named num in sub class:"+ sub.num);
+
+	      // printing the value of variable num of superclass
+	      System.out.println("value of the variable named num in super class:"+ super.num);
+	 }
 }
 
 public class My_Calculation extends Calculation {
@@ -48,6 +77,8 @@ public class My_Calculation extends Calculation {
 		
 		Subclass s = new Subclass(24);
 		s.getAge();
+		s.my_method();
+		
 		
 		Date dNow = new Date();
 		SimpleDateFormat ft = new SimpleDateFormat ("G E yyyy.mm.dd 'at' hh:mm:ss a zzzX");
