@@ -26,7 +26,7 @@ public class My_Calculation extends Calculation {
 	}
 	
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		// TODO Add Sub and Multi Method
 		Date dNow = new Date();
 		SimpleDateFormat ft = new SimpleDateFormat ("G E yyyy.mm.dd 'at' hh:mm:ss a zzzX");
 		System.out.println("Current Date: "+ft.format(dNow));
