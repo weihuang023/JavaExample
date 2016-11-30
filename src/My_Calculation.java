@@ -2,20 +2,6 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Scanner;
 
-class Calculation {
-	int result;
-	
-	public void addition(int x, int y){
-		result = x + y;
-		System.out.println("The sum of the given numbers: " +result);
-	}
-	
-	public void subtraction(int x, int y){
-		result = x - y;
-		System.out.println("The different between the given numbers: "+result);
-	}	
-}
-
 class Superclass{
 	
 	int age;
@@ -95,6 +81,20 @@ class Car extends speedLimit{
 	      super.display(40);
 	      super.horsePower(100);
 	 }
+}
+
+class Calculation {
+	int result;
+	
+	public void addition(int x, int y){
+		result = x + y;
+		System.out.println("The sum of the given numbers: " +result);
+	}
+	
+	public void subtraction(int x, int y){
+		result = x - y;
+		System.out.println("The different between the given numbers: "+result);
+	}	
 }
 
 public class My_Calculation extends Calculation {
