@@ -16,6 +16,24 @@ class Calculation {
 	}	
 }
 
+class Superclass{
+	
+	int age;
+	
+	Superclass (int age){
+		this.age = age;
+	}
+	
+	public void getAge(){		
+		System.out.println("The value of the variable name age in super class is "+ age);
+	}	
+}
+
+class Subclass extends Superclass{
+	Subclass(int age){
+		super(age);
+	}
+}
 
 public class My_Calculation extends Calculation {
 	private static Scanner in;
@@ -27,6 +45,10 @@ public class My_Calculation extends Calculation {
 	
 	public static void main(String[] args) {
 		// TODO Add Sub and Multi Method
+		
+		Subclass s = new Subclass(24);
+		s.getAge();
+		
 		Date dNow = new Date();
 		SimpleDateFormat ft = new SimpleDateFormat ("G E yyyy.mm.dd 'at' hh:mm:ss a zzzX");
 		System.out.println("Current Date: "+ft.format(dNow));
